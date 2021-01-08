@@ -1,0 +1,91 @@
+
+/* ＝＝＝header＝＝＝ */
+header {
+  background: url(/img/brando-makes-branding-PjhOkwN0ruY-unsplash.jpg) center center;
+  height: 500px;
+  background-size: cover;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  font-size: 1.5em;
+  text-align: center;
+  line-height: 500px;
+  margin-left: 200px;
+  color: #5c5c5c;
+}
+
+/* ＝＝＝nav＝＝＝ */
+
+#gnav {
+  margin-bottom: 100px;
+}
+#gnav ul {
+  display: flex;
+  justify-content: center;
+}
+
+#gnav li {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+#gnav li a {
+  margin-right: 15px;
+  justify-content: space-between;
+  color: #5c5c5c;
+}
+
+#gnav li a:hover {
+  color: #c7c6c6;
+}
+
+/* ＝＝＝main＝＝＝ */
+
+.inner {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 150px;
+}
+.inner_title_box h2 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #2e2d2d;
+}
+
+/* ＝＝＝スキルテーブル＝＝＝ */
+
+.skills_table {
+  margin-bottom: 40px;
+}
+
+.skills_table th {
+  width: 250px;
+}
+
+.skills_table th span {
+  background:linear-gradient(transparent 60%, #a2e1ff 60%);
+}
+
+.skills_table tr {
+  display: inline-block;
+  margin-bottom: 20px;
+
+}
+
+.skills_item {
+  font-size: 22px;
+}
+
+.skill_point {
+  padding-left: 60px;
+}
+
+.skill_lan {
+  font-weight: bold;
+}
+
+.skills_box p span{
+  /* border-bottom: solid 2px orange; */
+  background:linear-gradient(transparent 60%, #b6ffb6 60%);
+}
