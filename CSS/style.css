@@ -86,6 +86,46 @@ header h1 {
 }
 
 .skills_box p span{
-  /* border-bottom: solid 2px orange; */
   background:linear-gradient(transparent 60%, #b6ffb6 60%);
+}
+
+/* ＝＝＝Works＝＝＝ */
+
+.itemWord {
+  margin: 0 auto;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  border: #d3d3d3 solid 1px;
+  box-shadow:5px 5px 10px #cecece;
+  padding: 30px 10px;
+}
+
+.card_img {
+  width: 50%;
+}
+
+.card img {
+  margin-bottom: 20px;
+}
+
+.card_explain {
+  margin: 0 auto;
+}
+
+.card_explain p {
+  margin-bottom: 20px;
+  font-size: 0.9em;
+}
+
+.card_explain_title {
+  text-align: center;
+  font-weight: bold;
+}
+
+.card_explain_title span {
+  background: rgb(255, 242, 183);
 }
