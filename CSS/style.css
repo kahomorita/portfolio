@@ -130,6 +130,27 @@ header h1 {
   background: rgb(255, 242, 183);
 }
 
+/* ＝＝＝footer＝＝＝ */
+.footer {
+  background: #8a8b8d;
+  height: 200px;
+  margin-bottom: 0;
+}
+
+.footer #gnav li a {
+  margin-right: 15px;
+  justify-content: space-between;
+  color: #e6e4e4;
+}
+
+.footer #gnav li a:hover {
+  color: #8a8a8a;
+}
+
+.footer #gnav ul {
+  align-items: center;
+  height: 200px;
+}
 
 /* ＝＝＝＝＝＝＝JS＝＝＝＝＝＝ */
 
