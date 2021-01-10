@@ -1,3 +1,6 @@
+'use strict'
+{
+
 const smoothScrollTrigger = document.querySelectorAll('a[href^="#"]');
   for (let i = 0; i < smoothScrollTrigger.length; i++){
     smoothScrollTrigger[i].addEventListener('click', (e) => {
@@ -14,3 +17,23 @@ const smoothScrollTrigger = document.querySelectorAll('a[href^="#"]');
       });
     });
   }
+
+  const scrollTop = document.querySelector('.js-scroll-top');
+
+  scrollTop.addEventListener('click',()=>{
+    window.scrollTo({
+      top:0,
+      behavior:'smooth'
+    });
+  },false);
+
+  window.addEventListener('scroll',event=>{
+    if(event.currentTarget.pageYOffset > 200) {
+      scrollTop.classList.add('show');
+    } else {
+      scrollTop.classList.remove('show');
+    }
+  });
+
+
+}
