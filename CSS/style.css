@@ -177,6 +177,44 @@ form button {
   height: 200px;
 }
 
+
+/* ＝＝＝↓↓↓↓complete.php↓↓↓↓＝＝＝ */
+
+.confirm {
+  margin-top: 200px;
+  background: #ffffff;
+  padding: 100px 0;
+  color: #6e6c6c;
+}
+
+.message_confirm,.message_info {
+  margin-bottom: 30px;
+}
+
+.message_confirm {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.message_info {
+  /* display: flex; */
+  margin-left: 100px;
+}
+
+.message_info p {
+  color: #74b67f;
+}
+
+form .confirm_button {
+  display: block;
+  margin: 0 auto;
+}
+
+.last_confirm {
+  text-align: center;
+  margin: 100px 0 20px 0;
+}
+
 /* ＝＝＝＝＝＝＝JS＝＝＝＝＝＝ */
 
 .scroll-top {
