@@ -9,12 +9,14 @@
 </head>
 <body>
   <h1>メッセージ内容</h1>
-  <form action="mailto.php" method="post">
-    <p>name:</p><?php echo $_POST['name']; ?>
-    <p>mail address:</p><?php echo $_POST['mail']; ?>
-    <p>message:</p><?php echo $_POST['message']; ?>
+  <form action="complete.php" method="post">
+    <div class="message_info">
+      <p>name:</p><?php echo htmlspecialchars($_POST['name']); ?>
+    </div>
+    <p>mail address:</p><?php echo htmlspecialchars($_POST['mail']); ?>
+    <p>message:</p><?php echo htmlspecialchars($_POST['message']); ?>
 
-    <input type="submit" value="送信">
+    <button type="submit">送信</button>
   </form>
 </body>
 </html>

@@ -1,7 +1,7 @@
 
 /* ＝＝＝header＝＝＝ */
 header {
-  background: url(/img/brando-makes-branding-PjhOkwN0ruY-unsplash.jpg) center center;
+  background: url(../img/brando-makes-branding-PjhOkwN0ruY-unsplash.jpg) center center;
   height: 500px;
   background-size: cover;
   align-items: center;
@@ -18,25 +18,25 @@ header h1 {
 
 /* ＝＝＝nav＝＝＝ */
 
-#gnav {
+.gnav {
   margin-bottom: 100px;
 }
-#gnav ul {
+.gnav ul {
   display: flex;
   justify-content: center;
 }
 
-#gnav li {
+.gnav li {
   margin-left: 50px;
   margin-right: 50px;
 }
-#gnav li a {
+.gnav li a {
   margin-right: 15px;
   justify-content: space-between;
   color: #5c5c5c;
 }
 
-#gnav li a:hover {
+.gnav li a:hover {
   color: #c7c6c6;
 }
 
@@ -130,6 +130,31 @@ header h1 {
   background: rgb(255, 242, 183);
 }
 
+
+/* ＝＝＝contact＝＝＝ */
+
+form input {
+  width: 500px;
+  height: 40px;
+}
+
+form textarea {
+  width: 500px;
+  height: 100px;
+  border: #5c5c5c solid 1px;
+  background: #ffffff;
+}
+
+form input,form textarea {
+  margin-bottom: 30px;
+}
+
+form button {
+  width: 100px;
+  height: 30px;
+  margin-left: 200px;
+}
+
 /* ＝＝＝footer＝＝＝ */
 .footer {
   background: #8a8b8d;
@@ -137,17 +162,17 @@ header h1 {
   margin-bottom: 0;
 }
 
-.footer #gnav li a {
+.footer .gnav li a {
   margin-right: 15px;
   justify-content: space-between;
   color: #e6e4e4;
 }
 
-.footer #gnav li a:hover {
+.footer .gnav li a:hover {
   color: #8a8a8a;
 }
 
-.footer #gnav ul {
+.footer .gnav ul {
   align-items: center;
   height: 200px;
 }

@@ -112,15 +112,13 @@
 
           <form action="./confirm.php" method="post">
             <p>name</p>
-            <input type="text" name="name"/>
+            <input type="text" name="name" required maxlength="20">
             <p>mail address</p>
-            <input type="mail" name="mail">
+            <input type="mail" name="mail" required maxlength="256">
             <p>message</p>
-            <textarea name="message">
-
-            </textarea>
+            <textarea name="message" required></textarea>
             <br>
-            <input type="submit" value="送信">
+            <button type="submit">確認画面へ</button>
           </form>
 
         </div>
@@ -130,7 +128,7 @@
 
   <div class="scroll-top js-scroll-top"><span>↑</span></div>
   <footer class="footer">
-    <nav id="gnav">
+    <nav class="gnav">
       <ul>
         <li>
           <a href="#section1">aboutMe</a>
