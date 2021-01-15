@@ -8,7 +8,7 @@
   <title>確認画面</title>
 </head>
 <body>
-  <div class="inner confirm">
+  <div class="inner message_box">
     <h1 class="message_confirm">メッセージ内容</h1>
     <form action="complete.php" method="post">
       <div class="message_info">

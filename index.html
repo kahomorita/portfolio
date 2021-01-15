@@ -11,7 +11,7 @@
   <header>
     <h1>Kaho Morita's Portfolio</h1>
   </header>
-  <nav id="gnav">
+  <nav class="gnav">
     <ul>
       <li>
         <a href="#section1">aboutMe</a>
@@ -111,11 +111,19 @@
         <div class="inner_explain_box">
 
           <form action="./confirm.php" method="post">
-            <p>name</p>
+            <div class="confirm_item">
+              <p>name</p><p class="require">必須</p>
+            </div>
             <input type="text" name="name" required maxlength="20">
-            <p>mail address</p>
-            <input type="mail" name="mail" required maxlength="256">
-            <p>message</p>
+
+            <div class="confirm_item">
+              <p>mail address</p><p class="require">必須</p>
+            </div>
+            <input type="email" name="mail" required maxlength="256">
+
+            <div class="confirm_item">
+              <p>message</p><p class="require">必須</p>
+            </div>
             <textarea name="message" required></textarea>
             <br>
             <button type="submit">確認画面へ</button>

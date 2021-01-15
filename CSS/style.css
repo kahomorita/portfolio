@@ -149,6 +149,20 @@ form input,form textarea {
   margin-bottom: 30px;
 }
 
+.confirm_item {
+  display: flex;
+}
+
+.require {
+  background: #e75e5e;
+  border-radius: 5px;
+  margin-left: 10px;
+  padding: 0 10px;
+  color: #ffffff;
+  font-size: 0.7em;
+  height: 22px;
+}
+
 form button {
   width: 100px;
   height: 30px;
@@ -178,9 +192,9 @@ form button {
 }
 
 
-/* ＝＝＝↓↓↓↓complete.php↓↓↓↓＝＝＝ */
+/* ＝＝＝↓↓↓↓confirm.php↓↓↓↓＝＝＝ */
 
-.confirm {
+.message_box {
   margin-top: 200px;
   background: #ffffff;
   padding: 100px 0;
@@ -197,7 +211,6 @@ form button {
 }
 
 .message_info {
-  /* display: flex; */
   margin-left: 100px;
 }
 
@@ -213,6 +226,22 @@ form .confirm_button {
 .last_confirm {
   text-align: center;
   margin: 100px 0 20px 0;
+}
+
+/* ＝＝＝↓↓↓↓complete.php↓↓↓↓＝＝＝ */
+
+.complete_msg {
+  margin-left: 300px;
+}
+
+.complete_name {
+
+  text-align: right;
+  margin: 100px 30px 0 0 ;
+}
+
+.complete_box .message_box {
+  padding-bottom: 0;
 }
 
 /* ＝＝＝＝＝＝＝JS＝＝＝＝＝＝ */
