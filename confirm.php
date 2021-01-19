@@ -26,5 +26,16 @@
       <button type="submit" class="confirm_button">OK</button>
     </form>
   </div>
+
+  <footer class="footer">
+    <nav class="gnav">
+      <ul>
+        <li>
+          <a href="index.html">TOP</a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
+
 </body>
 </html>

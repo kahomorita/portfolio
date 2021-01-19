@@ -53,6 +53,26 @@ header h1 {
   color: #2e2d2d;
 }
 
+/* ＝＝＝aboutMe ＝＝＝*/
+
+.gitHub {
+  margin-top: 20px;
+}
+
+.gitHub a{
+  color: #292929;
+}
+
+.gitHub a:hover {
+  color: #d4d4d4;
+}
+
+.git_icon {
+  width: 40px;
+  margin-right: 10px;
+}
+
+
 /* ＝＝＝スキルテーブル＝＝＝ */
 
 .skills_table {
