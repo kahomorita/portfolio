@@ -53,8 +53,10 @@ if($_SERVER['REQUEST_METHOD']==='POST') {
 
       <p class="last_confirm">こちらの内容で送信してもよろしいですか？</p>
 
-      <a href="./index.php">戻る</a>
-      <button type="submit" class="confirm_button">OK</button>
+      <div class="confirm_button">
+        <a href="./index.php" class="button">back</a>
+        <button type="submit" class="button">OK</button>
+      </div>
     </form>
   </div>
 
@@ -62,7 +64,7 @@ if($_SERVER['REQUEST_METHOD']==='POST') {
     <nav class="gnav">
       <ul>
         <li>
-          <a href="index.html">TOP</a>
+          <a href="index.php">TOP</a>
         </li>
       </ul>
     </nav>

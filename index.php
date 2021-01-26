@@ -175,7 +175,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
               <p class="error_msg">※メッセージをご記入ください</p>
             <?php endif; ?>
             <br>
-            <button type="submit">確認画面へ</button>
+            <button type="submit" class="button index_button">確認画面へ</button>
           </form>
 
         </div>

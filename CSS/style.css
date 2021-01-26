@@ -165,12 +165,10 @@ form textarea {
   background: #ffffff;
 }
 
-form input,form textarea {
-  /* margin-bottom: 30px; */
-}
 
 .confirm_item {
   display: flex;
+  margin-top: 30px;
 }
 
 .require {
@@ -183,10 +181,15 @@ form input,form textarea {
   height: 22px;
 }
 
-form button {
+form .button {
   width: 100px;
   height: 30px;
+  border-radius: 5px;
+}
+
+.index_button {
   margin-left: 200px;
+  background: #b6b5b5;
 }
 
 .error_msg {
@@ -243,8 +246,21 @@ form button {
   color: #74b67f;
 }
 
-form .confirm_button {
-  display: block;
+.confirm_button {
+  display: flex;
+  width: 35%;
+  margin: 0 auto;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.confirm_button a {
+  text-align: center;
+  color: #000000;
+}
+
+.confirm_button .button {
+  background: #c8d3c0;
   margin: 0 auto;
 }
 
