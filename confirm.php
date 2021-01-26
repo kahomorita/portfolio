@@ -1,3 +1,33 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['form'])) {
+  header('Location: index.php');
+  exit();
+} else {
+  $post = $_SESSION['form'];
+}
+
+if($_SERVER['REQUEST_METHOD']==='POST') {
+    $to = "kahomaru2679@yahoo.co.jp";
+    $from = $post['mail'];
+    $subject = 'メッセージが届きました';
+    $body = <<<EOT
+    名前： {$post['name']}
+    メールアドレス： {$post['mail']}
+    メッセージ内容：
+    {$post['message']}
+    EOT;
+
+    mb_send_mail($to,$subject,$body,"From:{$from}");
+    unset($_SESSION['form']);
+    header('Location:complete.html');
+    exit();
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -10,19 +40,20 @@
 <body>
   <div class="inner message_box">
     <h1 class="message_confirm">メッセージ内容</h1>
-    <form action="complete.php" method="post">
+    <form action="" method="post">
       <div class="message_info">
-        <p>name:</p><?php echo htmlspecialchars($_POST['name']); ?>
+        <p>name:</p><?php echo htmlspecialchars($post['name']); ?>
       </div>
       <div class="message_info">
-        <p>mail address:</p><?php echo htmlspecialchars($_POST['mail']); ?>
+        <p>mail address:</p><?php echo htmlspecialchars($post['mail']); ?>
       </div>
       <div class="message_info">
-        <p>message:</p><?php echo htmlspecialchars($_POST['message']); ?>
+        <p>message:</p><?php echo nl2br(htmlspecialchars($post['message'])); ?>
       </div>
 
       <p class="last_confirm">こちらの内容で送信してもよろしいですか？</p>
 
+      <a href="./index.php">戻る</a>
       <button type="submit" class="confirm_button">OK</button>
     </form>
   </div>

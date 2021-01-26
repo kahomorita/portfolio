@@ -1,3 +1,36 @@
+<?php
+session_start();
+$error = [];
+
+if($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+  $post = filter_input_array(INPUT_POST,FILTER_SANITIZE_STRING);
+
+  if ($post['name'] === '') {
+    $error['name'] = 'blank';
+  }
+  if ($post['mail'] === '') {
+    $error['mail'] = 'blank';
+  }else if(!filter_var($post['mail'], FILTER_VALIDATE_EMAIL)){
+    $error['mail'] = 'mail';
+  }
+  if ($post['message'] === '') {
+    $error['message'] = 'blank';
+  }
+
+  if (count($error) === 0) {
+    $_SESSION['form'] = $post;
+    header('Location: ./confirm.php');
+    exit();
+}
+}else {
+  if(isset($_SESSION['form'])) {
+    $post =$_SESSION['form'];
+  }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -114,21 +147,33 @@
         <h2 class="itemWord">contact</h2>
         <div class="inner_explain_box">
 
-          <form action="./confirm.php" method="post">
+          <form action="" method="POST">
             <div class="confirm_item">
               <p>name</p><p class="require">必須</p>
             </div>
-            <input type="text" name="name" required maxlength="20">
+            <input type="text" name="name" value="<?php echo htmlspecialchars($post['name']); ?>">
+            <?php if($error['name']==='blank'):?>
+              <p class="error_msg">※名前をご記入ください</p>
+            <?php endif; ?>
 
             <div class="confirm_item">
               <p>mail address</p><p class="require">必須</p>
             </div>
-            <input type="email" name="mail" required maxlength="256">
+            <input type="email" name="mail" value="<?php echo htmlspecialchars($post['mail']); ?>">
+            <?php if($error['mail']==='blank'):?>
+              <p class="error_msg">※メールアドレスをご記入ください</p>
+            <?php endif; ?>
+            <?php if($error['mail']==='mail'):?>
+              <p class="error_msg">※メールアドレスを正しくご記入ください</p>
+            <?php endif; ?>
 
             <div class="confirm_item">
               <p>message</p><p class="require">必須</p>
             </div>
-            <textarea name="message" required></textarea>
+            <textarea name="message"><?php echo htmlspecialchars($post['message']); ?></textarea>
+            <?php if($error['message']==='blank'):?>
+              <p class="error_msg">※メッセージをご記入ください</p>
+            <?php endif; ?>
             <br>
             <button type="submit">確認画面へ</button>
           </form>
@@ -162,3 +207,4 @@
   <script src="js/main.js"></script>
 </body>
 </html>
+
